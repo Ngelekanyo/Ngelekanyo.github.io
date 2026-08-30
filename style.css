@@ -1,0 +1,562 @@
+/* ------------------------------
+   RESET & VARIABLES
+-------------------------------- */
+
+:root {
+    --bg: #f5f3ee;
+    --text: #181818;
+    --muted: #6f6f6f;
+    --accent: #ff5c35;
+    --card: #ebe8e1;
+    --border: #d5d2ca;
+
+    --max-width: 1200px;
+}
+
+body.dark {
+    --bg: #151515;
+    --text: #f2f0eb;
+    --muted: #a8a8a8;
+    --accent: #ff6b47;
+    --card: #222222;
+    --border: #383838;
+}
+
+
+/* ------------------------------
+   GLOBAL
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+-------------------------------- */
+
+.navbar {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+
+/* ------------------------------
+   LAYOUT
+-------------------------------- */
+
+.section,
+.hero,
+.contact {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 120px 30px;
+}
+
+.section {
+    border-top: 1px solid var(--border);
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.section-number {
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
+.section h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: -2px;
+}
+
+.section-intro {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+
+/* ------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin-bottom: 35px;
+}
+
+.hero-text {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.button {
+    padding: 14px 22px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.secondary {
+    border: 1px solid var(--border);
+}
+
+.hero-number {
+    text-align: right;
+    color: var(--muted);
+}
+
+.hero-number span {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.hero-number p {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+
+/* ------------------------------
+   CURRENTLY
+-------------------------------- */
+
+.currently-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.currently-card {
+    background: var(--bg);
+    padding: 35px;
+    min-height: 220px;
+}
+
+.card-label {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 35px;
+}
+
+.currently-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------
+   PROJECTS
+-------------------------------- */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.project-card.featured {
+    grid-column: span 2;
+}
+
+.project-image {
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+.featured .project-image {
+    height: 450px;
+}
+
+.placeholder {
+    background:
+        linear-gradient(
+            135deg,
+            var(--card),
+            transparent
+        );
+    border: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder span {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.project-link {
+    margin-top: 20px;
+    border: none;
+    background: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   IDEA SHELF
+-------------------------------- */
+
+.idea-list {
+    border-top: 1px solid var(--border);
+}
+
+.idea-item {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.idea-icon {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.idea-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.idea-item p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.idea-status {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+
+/* ------------------------------
+   JOURNAL
+-------------------------------- */
+
+.journal-list {
+    border-top: 1px solid var(--border);
+}
+
+.journal-item {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+
+    display: grid;
+    grid-template-columns: 150px 1fr 40px;
+    align-items: center;
+    gap: 20px;
+
+    transition: padding-left 0.2s ease;
+}
+
+.journal-item:hover {
+    padding-left: 10px;
+}
+
+.journal-date {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.journal-item h3 {
+    margin-bottom: 8px;
+}
+
+.journal-item p {
+    color: var(--muted);
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+
+/* ------------------------------
+   NOW
+-------------------------------- */
+
+.now-content {
+    max-width: 800px;
+}
+
+.now-date {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.now-content h3 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 30px;
+}
+
+.now-content h3 span {
+    color: var(--accent);
+}
+
+.now-content > p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* ------------------------------
+   CONTACT
+-------------------------------- */
+
+.contact {
+    text-align: center;
+    padding: 160px 30px;
+}
+
+.contact h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.contact h2 a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+    max-width: var(--max-width);
+    margin: auto;
+
+    border-top: 1px solid var(--border);
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE
+-------------------------------- */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero-number {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .currently-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card.featured {
+        grid-column: span 1;
+    }
+
+    .featured .project-image {
+        height: 300px;
+    }
+
+    .idea-item {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .idea-status {
+        display: none;
+    }
+
+    .journal-item {
+        grid-template-columns: 1fr 30px;
+    }
+
+    .journal-date {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

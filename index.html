@@ -1,8 +1,384 @@
 <!DOCTYPE html>
-<html>
-    <head>Ngelekanyo's site</head>
-    <body>
-        <h1>Hello World!</h1>
-        <p>This site is hosted with github pages.</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ngelekanyo | Building, Learning, Becoming</title>
+    <meta name="description"
+        content="The personal website and living workshop of Ngelekanyo — an engineering student, maker, and curious problem solver.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">NGELEKANYO<span>.</span></a>
+
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#ideas">Ideas</a>
+            <a href="#journal">Journal</a>
+            <a href="#now">Now</a>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            ☼
+        </button>
+    </nav>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-content">
+                <p class="eyebrow">ENGINEERING • MAKING • LEARNING</p>
+
+                <h1>
+                    I have a lot more ideas<br>
+                    than I can build.
+                </h1>
+
+                <p class="hero-text">
+                    So I'm learning to build better.
+                    I'm an engineering student, builder, and human centered problem solver
+                    exploring ideas through design and experimentation.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="button primary">
+                        See what I'm building ↓
+                    </a>
+
+                    <a href="#journal" class="button secondary">
+                        Follow the journey
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-number">
+                <span>01</span>
+                <p>WORK IN PROGRESS</p>
+            </div>
+
+        </section>
+
+
+        <!-- Currently -->
+        <section class="section currently">
+
+            <div class="section-header">
+                <p class="section-number">02</p>
+                <h2>Currently</h2>
+            </div>
+
+            <div class="currently-grid">
+
+                <div class="currently-card">
+                    <span class="status-dot"></span>
+                    <p class="card-label">BUILDING</p>
+                    <h3>A personal portfolio & digital workshop</h3>
+                </div>
+
+                <div class="currently-card">
+                    <p class="card-label">LEARNING</p>
+                    <h3>How to turn ideas into finished things.</h3>
+                </div>
+
+                <div class="currently-card">
+                    <p class="card-label">THINKING ABOUT</p>
+                    <h3>Engineering systems that make everyday life better.</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects" class="section projects">
+
+            <div class="section-header">
+                <p class="section-number">03</p>
+                <h2>Things I've built.</h2>
+            </div>
+
+            <p class="section-intro">
+                Projects are where ideas meet reality — and reality usually has
+                a few opinions of its own.
+            </p>
+
+            <div class="project-grid">
+
+                <article class="project-card featured">
+                    <div class="project-image placeholder">
+                        <span>PROJECT IMAGE</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span>01</span>
+                            <span>ONGOING</span>
+                        </div>
+
+                        <h3>Self watering Planter</h3>
+
+                        <p>
+                            An exploration of 3D modeling and printing, focusing on 
+                            efficient 3D printing, soil stability, and water flow, 
+                            retention and distribution. which combined easthetic with practical
+                            engineering constraints.
+                        </p>
+
+                        <button class="project-link">
+                            View project →
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-image placeholder">
+                        <span>PROJECT IMAGE</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span>02</span>
+                            <span>EXPERIMENT</span>
+                        </div>
+
+                        <h3>Fidget Charger</h3>
+
+                        <p>
+                            Exploring whether play, motion and mechanical energy
+                            can become something useful.
+                        </p>
+
+                        <button class="project-link">
+                            View project →
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-image placeholder">
+                        <span>PROJECT IMAGE</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span>03</span>
+                            <span>CONCEPT</span>
+                        </div>
+
+                        <h3>Makerspace Tracker</h3>
+
+                        <p>
+                            A simple system for capturing the people, projects and
+                            stories moving through a creative space. Automating their 
+                            documentation so they can focus on building without missing 
+                            important parts of their journey. 
+                            While also making suggestion for improvement with AI. while 
+                            also allowing the makerspace to track the progress of their members 
+                            and projects and their averall impact.
+                        </p>
+
+                        <button class="project-link">
+                            View project →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Idea Shelf -->
+        <section id="ideas" class="section ideas">
+
+            <div class="section-header">
+                <p class="section-number">04</p>
+                <h2>The idea shelf</h2>
+            </div>
+
+            <p class="section-intro">
+                Not every idea needs to become a project. Some just need somewhere
+                to live until the right time.
+            </p>
+
+            <div class="idea-list">
+
+                <div class="idea-item">
+                    <span class="idea-icon">✦</span>
+
+                    <div>
+                        <h3>Campus design challenges</h3>
+                        <p>
+                            What if students regularly redesigned small frustrations
+                            around university life?
+                        </p>
+                    </div>
+
+                    <span class="idea-status">ON THE SHELF</span>
+                </div>
+
+
+                <div class="idea-item">
+                    <span class="idea-icon">✦</span>
+
+                    <div>
+                        <h3>Harvesting energy from everyday systems.</h3>
+                        <p>
+                            Exploring everyday objects that generate useful energy that can be harvested.
+                        </p>
+                    </div>
+
+                    <span class="idea-status">EXPLORING</span>
+                </div>
+
+
+                <div class="idea-item">
+                    <span class="idea-icon">✦</span>
+
+                    <div>
+                        <h3>Better ways to document making</h3>
+                        <p>
+                            Can technology help makers capture their journey without
+                            adding unnecessary admin?
+                        </p>
+                    </div>
+
+                    <span class="idea-status">THINKING</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Journal -->
+        <section id="journal" class="section journal">
+
+            <div class="section-header">
+                <p class="section-number">05</p>
+                <h2>Build notes</h2>
+            </div>
+
+            <div class="journal-list">
+
+                <article class="journal-item">
+                    <span class="journal-date">AUG 2026</span>
+
+                    <div>
+                        <h3>On leaving things better than you found them</h3>
+                        <p>
+                            A thought that stuck with me from the makerspace. Reminds me to think about what can be better tomorrow because of what I do today.
+                        </p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </article>
+
+
+                <article class="journal-item">
+                    <span class="journal-date">AUG 2026</span>
+
+                    <div>
+                        <h3>Why I keep starting things</h3>
+                        <p>
+                            An honest reflection on ideas, excitement and finishing.
+                        </p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </article>
+
+
+                <article class="journal-item">
+                    <span class="journal-date">COMING SOON</span>
+
+                    <div>
+                        <h3>The next thing I learn from failing</h3>
+                        <p>
+                            Probably arriving sooner than expected!
+                        </p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Now -->
+        <section id="now" class="section now">
+
+            <div class="section-header">
+                <p class="section-number">06</p>
+                <h2>Now</h2>
+            </div>
+
+            <div class="now-content">
+
+                <p class="now-date">
+                    LAST UPDATED: AUGUST 2026
+                </p>
+
+                <h3>
+                    Right now, I'm focused on becoming better at
+                    <span>finishing what I start.</span>
+                </h3>
+
+                <p>
+                    I'm studying engineering, spending time around makers and
+                    creative people, experimenting with projects, and trying to
+                    build a life where curiosity leads to action.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section class="contact">
+
+            <p class="eyebrow">LET'S BUILD SOMETHING</p>
+
+            <h2>
+                Have an interesting problem?<br>
+                <a href="mailto:ngelekanyo100@gmail.com">Let's talk.</a>
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© <span id="year"></span> Ngelekanyo. Built slowly, improved constantly.</p>
+
+        <div class="social-links">
+            <a href="https://github.com/Ngelekanyo">GitHub</a>
+            <a href="https://www.linkedin.com/in/ngelekanyo-netshivhangoni-8042a1265/">LinkedIn</a>
+            <a href="https://www.instagram.com/_ngelekanyo?igsi=MXYybzZuYmIzdjIycw%3D%3D&utm_source=qr">Instagram</a>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
